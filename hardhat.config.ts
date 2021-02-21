@@ -56,6 +56,16 @@ const config: HardhatUserConfig = {
   mocha: {
     timeout: 0,
   },
+  external: {
+    contracts: [
+      {
+        artifacts: 'node_modules/@uniswap/v2-core/build',
+      },
+      {
+        artifacts: 'node_modules/@uniswap/v2-periphery/build',
+      },
+    ],
+  },
 };
 
 export default config;
